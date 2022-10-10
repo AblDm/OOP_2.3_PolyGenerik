@@ -19,9 +19,8 @@ public class Main {
 
         DriverB roman = new DriverB ("Роман",true,2, car, TypeOfBody.HATCHBACK);
         DriverD larisa = new DriverD ("Лариса",true,2, truck, TypeOfWeight.N3);
-        DriverC  stanislav = new DriverC ("Роман",true,2, bus1, TypeOfCapacity.ESPECIALLY_SMALL);
+        DriverC<PassengerHaving> stanislav = new DriverC<> ("Роман",true,2, bus1, TypeOfCapacity.ESPECIALLY_SMALL, new PassengerHaving (true));
         System.out.println (stanislav);
-
 
 
 
