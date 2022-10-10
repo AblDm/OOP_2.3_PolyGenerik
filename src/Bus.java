@@ -5,7 +5,7 @@ public class Bus extends Transport implements Competing {
 
     @Override
     public void start (){
-        System.out.println ("Вставить ключ в зажигания ");
+        System.out.println ("Вставить ключ в зажигания из " + getBrand ());
     }
     @Override
     public void finish(){

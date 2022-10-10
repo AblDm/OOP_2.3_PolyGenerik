@@ -1,4 +1,4 @@
-public class Car extends Transport implements Competing{
+public class Car extends Transport implements Competing  {
 
     public Car(String name, String model, double engineVolume) {
         super (name, model, engineVolume);

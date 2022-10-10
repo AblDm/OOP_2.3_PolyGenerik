@@ -12,7 +12,7 @@ public abstract class DriverAbstract <T extends Transport& Competing> {
         if (fullName == null || fullName.isEmpty ()) {
             System.out.println ("Укажите ФИО водителя");
         } else { this.fullName = fullName;}
-        if (licenseIsOK == false){
+        if (!licenseIsOK){
             throw new NullPointerException ("Нет прав, получить до гонки");}
         else {this.licenseIsOK = licenseIsOK;}
         if (car != null){

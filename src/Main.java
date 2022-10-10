@@ -17,10 +17,12 @@ public class Main {
         Truck truck2 = new Truck ("Грузовик 3", "Iveco", 10);
         Truck truck3 = new Truck ("Грузовик 4", "MEN", 10);
 
-        DriverB roman = new DriverB ("Роман",true,2, car);
-        DriverD larisa = new DriverD ("Лариса",true,2, truck);
-        DriverC stanislav = new DriverC ("Роман",true,2, bus1);
+        DriverB roman = new DriverB ("Роман",true,2, car, TypeOfBody.HATCHBACK);
+        DriverD larisa = new DriverD ("Лариса",true,2, truck, TypeOfWeight.N3);
+        DriverC  stanislav = new DriverC ("Роман",true,2, bus1, TypeOfCapacity.ESPECIALLY_SMALL);
         System.out.println (stanislav);
+
+
 
 
 
