@@ -15,12 +15,21 @@ public class Bus extends Transport implements Competing {
     @Override
     public void pitStop() {
         System.out.println ("Заехать в бокс ");
-        System.out.println ("Заправить средство передвижения ");
+        finish ();
+        System.out.println ("Заправить Автобус дизельным топливом");
+        // start ();
     }
 
     @Override
     public void lapTime() {
         System.out.println ("Лучшее время круга у машины");
+    }
+
+    @Override
+    public String toString() {
+        return "Bus{" +
+                "model='" + model + '\'' +
+                '}';
     }
 
     @Override

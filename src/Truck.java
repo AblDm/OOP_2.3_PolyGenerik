@@ -7,17 +7,19 @@ public class Truck extends Transport implements Competing {
 
     @Override
     public void start (){
-        System.out.println ("Вставить ключ в зажигания ");
+        System.out.println ("Вставить ключ в Грузовой автомобиль, включить трекер ");
     }
     @Override
     public void finish(){
-        System.out.println ("Заглушить мотор");
+        System.out.println ("Заглушить мотор, выключить трекер");
     }
 
     @Override
     public void pitStop() {
         System.out.println ("Заехать в бокс ");
+
         System.out.println ("Заправить средство передвижения ");
+
     }
 
     @Override

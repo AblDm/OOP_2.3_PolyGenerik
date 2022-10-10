@@ -43,7 +43,7 @@ public abstract class DriverAbstract <T extends Transport& Competing> {
     public String toString() {
         return
                 "Водитель " + fullName + '\'' +
-                " управляет автомобилем " + car +
+                " управляет транспортным средстваом " + car +
                 "и будет участвовать в заезде";
     }
 }
