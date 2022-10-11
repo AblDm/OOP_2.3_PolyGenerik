@@ -20,7 +20,7 @@ public abstract class DriverAbstract <T extends Transport& Competing> {
         setStage (stage);
     }
 
-    public void startMove (){
+    public void startMove (T car){
         System.out.println ((fullName + " заводит " + car.getBrand () + " " + car.getModel ()));
     }
     public void stopMove(){
