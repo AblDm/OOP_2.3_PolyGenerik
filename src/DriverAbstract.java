@@ -23,10 +23,10 @@ public abstract class DriverAbstract <T extends Transport& Competing> {
     public void startMove (T car){
         System.out.println ((fullName + " заводит " + car.getBrand () + " " + car.getModel ()));
     }
-    public void stopMove(){
+    public void stopMove(T car){
         System.out.println ((fullName + " останавливает " + car.getBrand () + " " + car.getModel ()));
     }
-    public void refill (){
+    public void refill (T car){
         System.out.println ((fullName + " заправляет " + car.getBrand () + " " + car.getModel ()));
     };
 

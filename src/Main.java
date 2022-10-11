@@ -23,7 +23,7 @@ public class Main {
         DriverC stanislav = new DriverC ("Роман",true,2, bus1, TypeOfCapacity.ESPECIALLY_SMALL);
         System.out.println (stanislav);
         stanislav.startMove (bus1);
-        stanislav.refill ();
+        stanislav.refill (bus1);
 
 
 
