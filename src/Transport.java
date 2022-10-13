@@ -20,6 +20,11 @@ public abstract class Transport {
             this.engineVolume = engineVolume;}
     }
 
+    public boolean service() {
+        System.out.println ("Автобус " + getBrand () + getModel () + " в диагностике не требуется");
+        return true;
+    }
+
     protected abstract void start ();
     protected abstract void finish();
 

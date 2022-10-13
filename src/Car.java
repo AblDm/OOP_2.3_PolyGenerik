@@ -5,6 +5,11 @@ public class Car extends Transport implements Competing  {
     }
 
     @Override
+    public boolean service() {
+        return Math.random ()>0.5;
+    }
+
+    @Override
     public void start (){
         System.out.println ("Вставить ключ в зажигания или нажать на кнопку зажигания на брелоке" );
     }

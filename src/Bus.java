@@ -4,6 +4,11 @@ public class Bus extends Transport implements Competing {
     }
 
     @Override
+    public boolean service() {
+        return false;
+    }
+
+    @Override
     public void start (){
         System.out.println ("Вставить ключ в зажигания из " + getBrand ());
     }

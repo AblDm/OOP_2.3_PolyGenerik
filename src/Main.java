@@ -25,8 +25,27 @@ public class Main {
         stanislav.startMove (bus1);
         stanislav.refill (bus1);
 
-
-
+        service (
+                truck1,truck,truck2,truck3,
+                car,car1,car2,car3,
+                bus, bus1,bus2,bus3
+        );
 
     }
+    private static void service (Transport... transports){
+        for (Transport transport : transports) {
+            serviceTransport (transport);
+        }
+    }
+    private static void serviceTransport (Transport transport) {
+        try {
+            if (!transport.service ()) {
+                throw new RuntimeException ("AVTO " + transport.getBrand () + " " + transport.getModel () + " не прошёл диагностику");
+            }
+        } catch (RuntimeException e)
+        {
+            System.out.println (e.getMessage ());
+        }
+    }
+
 }

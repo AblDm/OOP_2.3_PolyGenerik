@@ -21,7 +21,10 @@ public class Truck extends Transport implements Competing {
         System.out.println ("Заправить средство передвижения ");
 
     }
-
+    @Override
+    public boolean service() {
+        return Math.random ()>0.75;
+    }
     @Override
     public void lapTime() {
         System.out.println ("Лучшее время круга у машины");

@@ -34,7 +34,7 @@ public abstract class DriverAbstract <T extends Transport& Competing> {
 
     public void setStage(double stage) {
         if (stage <=0){
-            System.out.println ("Нужно больше стажа вождения.");
+            throw new IllegalArgumentException ("недостаточный стаж вождения");
         }
         else {this.stage = stage;}
     }
