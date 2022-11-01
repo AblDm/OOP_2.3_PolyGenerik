@@ -1,4 +1,5 @@
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,8 +8,8 @@ public class Main {
 
         Mechanister<Car> petr = new Mechanister<Car> ("Петр", "Механический", "Луцк");
         Mechanister<Transport> aleksey = new Mechanister<Transport> ("Петр", "Механический", "Луцк");
-        Spencer lukoil = new Spencer ("Лукойл", 20000);
-        Spencer michelin = new Spencer ("Michelin", 20000);
+        Spencer<Transport> lukoil = new Spencer<> ("Лукойл", 20000);
+        Spencer<Transport> michelin = new Spencer<> ("Michelin", 20000);
 
 
         Car car = new Car ("Мерседес", "ML", 10);
@@ -59,11 +60,10 @@ public class Main {
         pasha.service ();
 
 
-
-
-
-        List<Transport> transports = List.of (
-                truck, car, bus);
+        Set<Transport> transports = new HashSet<Transport>();
+                transports.add (truck);
+                transports.add (car);
+                transports.add (bus);
 
         ServiceStation serviceStation = new ServiceStation ();
         serviceStation.addCar (car);
@@ -87,7 +87,7 @@ public class Main {
             System.out.println (driver.fullName);
         }
         System.out.println ("Cпонсоры: ");
-        for (Spencer spencer: transport.getSpencers ()){
+        for (Spencer<?> spencer: transport.getSpencers ()){
             System.out.println (spencer.getName ());
         }
         System.out.println ("Механики: ");

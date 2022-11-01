@@ -1,14 +1,12 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public abstract class Transport {
     public String brand;
     public String model;
     public double engineVolume;
-    private final List<DriverAbstract<?>> drivers =new ArrayList<> ();
-    private final List<Mechanister<?>> mechanisters =new ArrayList<> ();
-    private final List<Spencer<?>> spencers =new ArrayList<> ();
+    private final Set<DriverAbstract<?>> drivers =new HashSet<> ();
+    private final Set<Mechanister<?>> mechanisters =new HashSet<> ();
+    private final Set<Spencer<?>> spencers =new HashSet<> ();
 
     @Override
     public String toString() {
@@ -54,15 +52,15 @@ public abstract class Transport {
         this.mechanisters.addAll (Arrays.asList (mechanisters));
     }
 
-    public List<DriverAbstract<?>> getDrivers() {
+    public Set<DriverAbstract<?>> getDrivers() {
         return drivers;
     }
 
-    public List<Mechanister<?>> getMechanisters() {
+    public Set<Mechanister<?>> getMechanisters() {
         return mechanisters;
     }
 
-    public List<Spencer<?>> getSpencers() {
+    public Set<Spencer<?>> getSpencers() {
         return spencers;
     }
 
