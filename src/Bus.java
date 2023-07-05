@@ -4,8 +4,13 @@ public class Bus extends Transport implements Competing {
     }
 
     @Override
+    public boolean service() {
+        return false;
+    }
+
+    @Override
     public void start (){
-        System.out.println ("Вставить ключ в зажигания ");
+        System.out.println ("Вставить ключ в зажигания из " + getBrand ());
     }
     @Override
     public void finish(){
@@ -36,4 +41,9 @@ public class Bus extends Transport implements Competing {
     public void maxSpeed() {
         System.out.println ("Лучшая скороть на круге у машины ");
     }
+    @Override
+    public void repair() {
+        System.out.println ("Автобус " + getBrand () + getModel () + " починен");
+    }
+
 }

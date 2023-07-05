@@ -1,7 +1,12 @@
-public class Car extends Transport implements Competing{
+public class Car extends Transport implements Competing  {
 
     public Car(String name, String model, double engineVolume) {
         super (name, model, engineVolume);
+    }
+
+    @Override
+    public boolean service() {
+        return Math.random ()>0.5;
     }
 
     @Override
@@ -11,6 +16,11 @@ public class Car extends Transport implements Competing{
     @Override
     public void finish(){
         System.out.println ("Заглушить мотор");
+    }
+
+    @Override
+    public void repair() {
+        System.out.println ("Машина " + getBrand () + getModel () + " починена");
     }
 
     @Override
